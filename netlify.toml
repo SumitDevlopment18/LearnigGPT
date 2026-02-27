@@ -1,0 +1,5 @@
+# Allow VITE_GROQ_API_KEY in build output — Vite inlines VITE_* env vars into the client bundle.
+# The key is used for client-side Groq API calls. For production, consider using a Netlify
+# serverless function so the key is never exposed in the browser.
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "VITE_GROQ_API_KEY"
